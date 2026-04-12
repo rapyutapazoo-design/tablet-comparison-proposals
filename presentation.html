@@ -79,11 +79,11 @@
         </header>
 
         <!-- ================= タブナビゲーション ================= -->
-        <nav class="grid grid-cols-2 md:flex md:flex-wrap gap-2 mb-4 md:mb-6 md:border-b-2 border-stone-100 md:pb-2" aria-label="Tabs">
-            <button onclick="switchTab('tab1')" id="btn-tab1" class="px-3 md:px-6 py-3 md:py-3.5 text-xs sm:text-sm font-bold rounded-lg md:rounded-t-xl md:rounded-b-none transition-all duration-300 bg-teal-800 text-white shadow-md md:shadow-none">1. 導入の目的</button>
-            <button onclick="switchTab('tab2')" id="btn-tab2" class="px-3 md:px-6 py-3 md:py-3.5 text-xs sm:text-sm font-medium rounded-lg md:rounded-t-xl md:rounded-b-none transition-all duration-300 bg-stone-200 text-slate-600 hover:bg-stone-300 hover:text-slate-800 shadow-sm md:shadow-none">2. 比較の前提</button>
-            <button onclick="switchTab('tab3')" id="btn-tab3" class="px-3 md:px-6 py-3 md:py-3.5 text-xs sm:text-sm font-medium rounded-lg md:rounded-t-xl md:rounded-b-none transition-all duration-300 bg-stone-200 text-slate-600 hover:bg-stone-300 hover:text-slate-800 shadow-sm md:shadow-none">3. 機種別詳細</button>
-            <button onclick="switchTab('tab4')" id="btn-tab4" class="px-3 md:px-6 py-3 md:py-3.5 text-xs sm:text-sm font-medium rounded-lg md:rounded-t-xl md:rounded-b-none transition-all duration-300 bg-stone-200 text-slate-600 hover:bg-stone-300 hover:text-slate-800 shadow-sm md:shadow-none">4. 総合評価</button>
+        <nav class="grid grid-cols-2 md:flex md:flex-wrap gap-2 mb-6 md:mb-8 md:border-b-2 border-stone-200 md:pb-2" aria-label="Tabs">
+            <button onclick="switchTab('tab1')" id="btn-tab1" class="px-2 md:px-6 py-3 md:py-2 rounded-lg md:rounded-b-none bg-teal-800 text-white font-semibold transition-colors text-sm sm:text-base shadow-sm md:shadow-none">1. 導入の目的</button>
+            <button onclick="switchTab('tab2')" id="btn-tab2" class="px-2 md:px-6 py-3 md:py-2 rounded-lg md:rounded-b-none bg-stone-200 text-slate-600 hover:bg-stone-300 hover:text-slate-800 font-semibold transition-colors text-sm sm:text-base shadow-sm md:shadow-none">2. 比較の前提</button>
+            <button onclick="switchTab('tab3')" id="btn-tab3" class="px-2 md:px-6 py-3 md:py-2 rounded-lg md:rounded-b-none bg-stone-200 text-slate-600 hover:bg-stone-300 hover:text-slate-800 font-semibold transition-colors text-sm sm:text-base shadow-sm md:shadow-none">3. 機種別詳細</button>
+            <button onclick="switchTab('tab4')" id="btn-tab4" class="px-2 md:px-6 py-3 md:py-2 rounded-lg md:rounded-b-none bg-stone-200 text-slate-600 hover:bg-stone-300 hover:text-slate-800 font-semibold transition-colors text-sm sm:text-base shadow-sm md:shadow-none">4. 総合評価</button>
         </nav>
 
         <!-- ================= メインコンテナ ================= -->
@@ -111,7 +111,7 @@
                 </h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
                     <!-- PC -->
-                    <article class="order-2 md:order-1 bg-stone-50 border border-stone-200 rounded-xl p-6 relative">
+                    <article class="bg-stone-50 border border-stone-200 rounded-xl p-6 relative">
                         <div class="absolute -top-3 left-6 bg-slate-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
                             PC
                         </div>
@@ -123,21 +123,8 @@
                             </p>
                         </div>
                     </article>
-                    <!-- スマホ -->
-                    <article class="order-3 md:order-3 bg-stone-50 border border-stone-200 rounded-xl p-6 relative">
-                        <div class="absolute -top-3 left-6 bg-slate-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
-                            スマートフォン
-                        </div>
-                        <div class="mt-4 text-center">
-                            <span class="text-slate-400 font-bold text-4xl block mb-2">×</span>
-                            <h4 class="font-bold text-slate-700 mb-2">画面が小さく不向き</h4>
-                            <p class="text-sm text-slate-600 leading-relaxed text-left">
-                                携帯性には優れますが、画面が小さいため一覧表示や各種資料の確認など、各業務用途に用いるには不向きです。
-                            </p>
-                        </div>
-                    </article>
-                    <!-- タブレット -->
-                    <article class="order-1 md:order-2 bg-white border-2 border-teal-600 rounded-xl p-6 relative shadow-md transform md:-translate-y-2">
+                    <!-- タブレット (中央配置・スマホ時一番上) -->
+                    <article class="order-first md:order-none bg-white border-2 border-teal-600 rounded-xl p-6 relative shadow-md transform md:-translate-y-2">
                         <div class="absolute -top-3 left-6 bg-teal-700 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
                             タブレット
                         </div>
@@ -146,6 +133,19 @@
                             <h4 class="font-bold text-teal-800 mb-2">最適なバランス</h4>
                             <p class="text-sm text-slate-600 leading-relaxed text-left">
                                 「持ち運び可能な取り回しの良さ」と「業務に十分な画面サイズ」を兼ね備えており、今回の課題解決に最も適したデバイスです。
+                            </p>
+                        </div>
+                    </article>
+                    <!-- スマホ -->
+                    <article class="bg-stone-50 border border-stone-200 rounded-xl p-6 relative">
+                        <div class="absolute -top-3 left-6 bg-slate-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                            スマートフォン
+                        </div>
+                        <div class="mt-4 text-center">
+                            <span class="text-slate-400 font-bold text-4xl block mb-2">×</span>
+                            <h4 class="font-bold text-slate-700 mb-2">画面が小さく不向き</h4>
+                            <p class="text-sm text-slate-600 leading-relaxed text-left">
+                                携帯性には優れますが、画面が小さいため一覧表示や各種資料の確認など、各業務用途に用いるには不向きです。
                             </p>
                         </div>
                     </article>
@@ -357,46 +357,9 @@
                                 <span class="w-1.5 h-4 bg-slate-400 rounded-full mr-2"></span>
                                 REDMIの特徴
                             </div>
-                            <p class="text-xs text-slate-600 leading-relaxed mb-3">
-                                <strong class="text-slate-800">12.1型の情報量と拡張性：</strong> 広い画面でkintoneの一覧表示に強く、12,000mAhのスタミナとmicroSDによる容量拡張も備えます。
-                            </p>
-                            <p class="text-[11px] text-slate-500 leading-relaxed bg-white p-2 rounded border border-stone-100">
-                                <strong class="text-stone-500 font-medium">評価：</strong> 圧倒的な安さは魅力ですが、キーボード配列の確認事項があるため、大量入力が必要な場合はLenovoに軍配が上がります。
-                            </p>
-                        </article>
-
-                        <article class="bg-stone-50/50 border border-stone-200 rounded-xl p-5 shadow-sm">
-                            <div class="text-slate-600 text-sm font-bold flex items-center mb-2">
-                                <span class="w-1.5 h-4 bg-stone-300 rounded-full mr-2"></span>
-                                iPadの特徴
-                            </div>
-                            <p class="text-xs text-slate-600 leading-relaxed mb-3">
-                                <strong class="text-slate-800">圧倒的な完成度と軽さ：</strong> 重量が約477gと最軽量で、A16 BionicによるOS最適化・動作速度の安定感は3機種中で最高レベルです。
-                            </p>
-                            <p class="text-[11px] text-slate-500 leading-relaxed bg-white p-2 rounded border border-stone-100">
-                                <strong class="text-stone-500 font-medium">評価：</strong> 運用コストとkintone画面の情報量の面で一歩譲りますが、端末の資産価値や安定性を最優先する場合の選択肢です。
-                            </p>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <!-- タブ4: 総合評価 -->
-            <section id="tab4" class="tab-content">
-                <header class="flex items-center border-b border-stone-100 pb-4 mb-6">
-                    <div class="w-2 h-6 bg-teal-800 rounded-full mr-3"></div>
-                    <h2 class="text-2xl font-bold text-slate-800 tracking-wide">総合比較と評価のサマリー</h2>
-                </header>
-
-                <div class="bg-teal-50 border-l-4 border-teal-700 p-4 rounded-r-xl mb-8 shadow-sm">
-                    <p class="text-sm text-teal-900 font-medium">
-                        スペック詳細と業務適性を踏まえた結果、<strong class="text-teal-800 font-bold border-b border-teal-700 pb-0.5">Lenovo Idea Tab Plus</strong> が最も業務効率を高める選択肢であると結論づけました。
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <p class="text-xs text-slate-600                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <!-- ランキング 2位 (Xiaomi) -->
-                    <article class="order-2 md:order-1 bg-white text-center border border-stone-200 rounded-2xl smooth-hover flex flex-col relative shadow-delicate">
+                    <article class="bg-white text-center border border-stone-200 rounded-2xl smooth-hover flex flex-col relative shadow-delicate">
                         <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-slate-700 text-white text-xs font-medium px-4 py-1.5 rounded-full shadow-md tracking-wider">
                             コストパフォーマンス特化
                         </div>
@@ -420,8 +383,8 @@
                         </div>
                     </article>
 
-                    <!-- ランキング 1位 (Lenovo) -->
-                    <article class="order-1 md:order-2 bg-white border rounded-2xl smooth-hover flex flex-col relative" style="border: 1px solid #c5a059; box-shadow: 0 10px 30px -10px rgba(197, 160, 89, 0.25);">
+                    <!-- ランキング 1位 (Lenovo: 中央配置・スマホ時一番上) -->
+                    <article class="order-first md:order-none bg-white border rounded-2xl smooth-hover flex flex-col relative" style="border: 1px solid #c5a059; box-shadow: 0 10px 30px -10px rgba(197, 160, 89, 0.25);">
                         <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-mutedgold-600 to-amber-500 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-md tracking-wider">
                             業務用最有力
                         </div>
@@ -432,6 +395,44 @@
                             <a href="https://www.lenovo.com/jp/ja/p/tablets/idea-tab-series/lenovo-idea-tab-plus/len103l0033" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-1.5 bg-emerald-50 text-emerald-800 border border-emerald-100 text-[10px] font-bold rounded-full mb-5 hover:bg-emerald-100 transition-all active:scale-95 shadow-sm group">
                                 公式サイトへ
                                 <svg class="w-2.5 h-2.5 ml-1.5 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                質の高い専用キーボードによるノートPC同等の運用が可能。現場でのテキスト入力や報告業務において最大の強みを発揮。
+                            </p>
+                        </div>
+                        <div class="bg-stone-50/50 border-t border-stone-100 p-4 rounded-b-2xl">
+                            <div class="text-[11px] text-slate-400 mb-1 text-center font-bold tracking-widest">PRACTICAL SCORE</div>
+                            <div class="flex justify-center space-x-1 text-teal-700 font-bold tracking-widest text-lg">
+                                ★★★★★
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ランキング 3位 (Apple) -->
+                    <article class="bg-white text-center border border-stone-200 rounded-2xl smooth-hover flex flex-col relative shadow-delicate">
+                        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-stone-400 text-white text-xs font-medium px-4 py-1.5 rounded-full shadow-md tracking-wider">
+                            安定性重視
+                        </div>
+                        <div class="p-8 flex-grow mt-2">
+                            <h4 class="text-slate-500 text-xs tracking-widest mb-2 font-semibold">APPLE</h4>
+                            <h3 class="text-xl font-bold text-slate-800 mb-4">11インチ iPad <span class="text-sm font-medium text-slate-500">(A16)</span></h3>
+                            <div class="mb-2 text-emerald-800 text-[10px] font-bold">完成度・安定感重視</div>
+                            <a href="https://www.apple.com/jp/ipad-11/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-1.5 bg-emerald-50 text-emerald-800 border border-emerald-100 text-[10px] font-bold rounded-full mb-5 hover:bg-emerald-100 transition-all active:scale-95 shadow-sm group">
+                                公式サイトへ
+                                <svg class="w-2.5 h-2.5 ml-1.5 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                業界トップクラスの安定性と完成度。長く使える安心感はあるが、今回の要件に対するコスト面ではやや不利。
+                            </p>
+                        </div>
+                        <div class="bg-stone-50/50 border-t border-stone-100 p-4 rounded-b-2xl">
+                            <div class="text-[11px] text-slate-400 mb-1 text-center font-bold tracking-widest">PRACTICAL SCORE</div>
+                            <div class="flex justify-center space-x-1 text-slate-500 font-bold tracking-widest text-lg">
+                                ★★★☆☆
+                            </div>
+                        </div>
+                    </article>
+                </div>14"></path></svg>
                             </a>
                             <p class="text-sm text-slate-600 leading-relaxed">
                                 質の高い専用キーボードによるノートPC同等の運用が可能。現場でのテキスト入力や報告業務において最大の強みを発揮。
@@ -483,8 +484,8 @@
             });
             
             // 全タブボタンのスタイルをリセット
-            const defaultClasses = "px-3 md:px-6 py-3 md:py-3.5 text-xs sm:text-sm font-medium rounded-lg md:rounded-t-xl md:rounded-b-none transition-all duration-300 bg-stone-200 text-slate-600 hover:bg-stone-300 hover:text-slate-800 shadow-sm md:shadow-none".split(" ");
-            const activeClasses = "px-3 md:px-6 py-3 md:py-3.5 text-xs sm:text-sm font-bold rounded-lg md:rounded-t-xl md:rounded-b-none transition-all duration-300 bg-teal-800 text-white shadow-md md:shadow-none".split(" ");
+            const defaultClasses = "px-2 md:px-6 py-3 md:py-2 rounded-lg md:rounded-b-none bg-stone-200 text-slate-600 hover:bg-stone-300 hover:text-slate-800 font-semibold transition-colors text-sm sm:text-base shadow-sm md:shadow-none".split(" ");
+            const activeClasses = "px-2 md:px-6 py-3 md:py-2 rounded-lg md:rounded-b-none bg-teal-800 text-white font-semibold transition-colors text-sm sm:text-base shadow-sm md:shadow-none".split(" ");
             
             ['btn-tab1', 'btn-tab2', 'btn-tab3', 'btn-tab4'].forEach(id => {
                 const btn = document.getElementById(id);
