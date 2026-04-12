@@ -79,11 +79,11 @@
         </header>
 
         <!-- ================= タブナビゲーション ================= -->
-        <nav class="flex flex-wrap gap-2 mb-4" aria-label="Tabs">
-            <button onclick="switchTab('tab1')" id="btn-tab1" class="px-6 py-3.5 text-sm font-bold rounded-t-xl transition-all duration-300 bg-teal-800 text-white shadow-md">1. 導入の目的</button>
-            <button onclick="switchTab('tab2')" id="btn-tab2" class="px-6 py-3.5 text-sm font-medium rounded-t-xl transition-all duration-300 bg-stone-200 text-slate-600 hover:bg-stone-300 hover:text-slate-800">2. 比較の前提</button>
-            <button onclick="switchTab('tab3')" id="btn-tab3" class="px-6 py-3.5 text-sm font-medium rounded-t-xl transition-all duration-300 bg-stone-200 text-slate-600 hover:bg-stone-300 hover:text-slate-800">3. 機種別詳細</button>
-            <button onclick="switchTab('tab4')" id="btn-tab4" class="px-6 py-3.5 text-sm font-medium rounded-t-xl transition-all duration-300 bg-stone-200 text-slate-600 hover:bg-stone-300 hover:text-slate-800">4. 総合評価</button>
+        <nav class="grid grid-cols-2 md:flex md:flex-wrap gap-2 mb-4 md:mb-6 md:border-b-2 border-stone-100 md:pb-2" aria-label="Tabs">
+            <button onclick="switchTab('tab1')" id="btn-tab1" class="px-3 md:px-6 py-3 md:py-3.5 text-xs sm:text-sm font-bold rounded-lg md:rounded-t-xl md:rounded-b-none transition-all duration-300 bg-teal-800 text-white shadow-md md:shadow-none">1. 導入の目的</button>
+            <button onclick="switchTab('tab2')" id="btn-tab2" class="px-3 md:px-6 py-3 md:py-3.5 text-xs sm:text-sm font-medium rounded-lg md:rounded-t-xl md:rounded-b-none transition-all duration-300 bg-stone-200 text-slate-600 hover:bg-stone-300 hover:text-slate-800 shadow-sm md:shadow-none">2. 比較の前提</button>
+            <button onclick="switchTab('tab3')" id="btn-tab3" class="px-3 md:px-6 py-3 md:py-3.5 text-xs sm:text-sm font-medium rounded-lg md:rounded-t-xl md:rounded-b-none transition-all duration-300 bg-stone-200 text-slate-600 hover:bg-stone-300 hover:text-slate-800 shadow-sm md:shadow-none">3. 機種別詳細</button>
+            <button onclick="switchTab('tab4')" id="btn-tab4" class="px-3 md:px-6 py-3 md:py-3.5 text-xs sm:text-sm font-medium rounded-lg md:rounded-t-xl md:rounded-b-none transition-all duration-300 bg-stone-200 text-slate-600 hover:bg-stone-300 hover:text-slate-800 shadow-sm md:shadow-none">4. 総合評価</button>
         </nav>
 
         <!-- ================= メインコンテナ ================= -->
@@ -111,7 +111,7 @@
                 </h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
                     <!-- PC -->
-                    <article class="bg-stone-50 border border-stone-200 rounded-xl p-6 relative">
+                    <article class="order-2 md:order-1 bg-stone-50 border border-stone-200 rounded-xl p-6 relative">
                         <div class="absolute -top-3 left-6 bg-slate-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
                             PC
                         </div>
@@ -124,7 +124,7 @@
                         </div>
                     </article>
                     <!-- スマホ -->
-                    <article class="bg-stone-50 border border-stone-200 rounded-xl p-6 relative">
+                    <article class="order-3 md:order-3 bg-stone-50 border border-stone-200 rounded-xl p-6 relative">
                         <div class="absolute -top-3 left-6 bg-slate-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
                             スマートフォン
                         </div>
@@ -137,7 +137,7 @@
                         </div>
                     </article>
                     <!-- タブレット -->
-                    <article class="bg-white border-2 border-teal-600 rounded-xl p-6 relative shadow-md transform md:-translate-y-2">
+                    <article class="order-1 md:order-2 bg-white border-2 border-teal-600 rounded-xl p-6 relative shadow-md transform md:-translate-y-2">
                         <div class="absolute -top-3 left-6 bg-teal-700 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
                             タブレット
                         </div>
@@ -395,8 +395,8 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <!-- ランキング 2位 -->
-                    <article class="bg-white text-center border border-stone-200 rounded-2xl smooth-hover flex flex-col relative shadow-delicate">
+                    <!-- ランキング 2位 (Xiaomi) -->
+                    <article class="order-2 md:order-1 bg-white text-center border border-stone-200 rounded-2xl smooth-hover flex flex-col relative shadow-delicate">
                         <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-slate-700 text-white text-xs font-medium px-4 py-1.5 rounded-full shadow-md tracking-wider">
                             コストパフォーマンス特化
                         </div>
@@ -420,8 +420,8 @@
                         </div>
                     </article>
 
-                    <!-- ランキング 1位 -->
-                    <article class="bg-white border rounded-2xl smooth-hover flex flex-col relative" style="border: 1px solid #c5a059; box-shadow: 0 10px 30px -10px rgba(197, 160, 89, 0.25);">
+                    <!-- ランキング 1位 (Lenovo) -->
+                    <article class="order-1 md:order-2 bg-white border rounded-2xl smooth-hover flex flex-col relative" style="border: 1px solid #c5a059; box-shadow: 0 10px 30px -10px rgba(197, 160, 89, 0.25);">
                         <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-mutedgold-600 to-amber-500 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-md tracking-wider">
                             業務用最有力
                         </div>
@@ -445,8 +445,8 @@
                         </div>
                     </article>
 
-                    <!-- ランキング 3位 -->
-                    <article class="bg-white text-center border border-stone-200 rounded-2xl smooth-hover flex flex-col relative shadow-delicate">
+                    <!-- ランキング 3位 (Apple) -->
+                    <article class="order-3 md:order-3 bg-white text-center border border-stone-200 rounded-2xl smooth-hover flex flex-col relative shadow-delicate">
                          <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-stone-400 text-white text-xs font-medium px-4 py-1.5 rounded-full shadow-md tracking-wider">
                             安定性重視
                         </div>
@@ -483,8 +483,8 @@
             });
             
             // 全タブボタンのスタイルをリセット
-            const defaultClasses = "px-6 py-3.5 text-sm font-medium rounded-t-xl transition-all duration-300 bg-stone-200 text-slate-600 hover:bg-stone-300 hover:text-slate-800".split(" ");
-            const activeClasses = "px-6 py-3.5 text-sm font-bold rounded-t-xl transition-all duration-300 bg-teal-800 text-white shadow-md".split(" ");
+            const defaultClasses = "px-3 md:px-6 py-3 md:py-3.5 text-xs sm:text-sm font-medium rounded-lg md:rounded-t-xl md:rounded-b-none transition-all duration-300 bg-stone-200 text-slate-600 hover:bg-stone-300 hover:text-slate-800 shadow-sm md:shadow-none".split(" ");
+            const activeClasses = "px-3 md:px-6 py-3 md:py-3.5 text-xs sm:text-sm font-bold rounded-lg md:rounded-t-xl md:rounded-b-none transition-all duration-300 bg-teal-800 text-white shadow-md md:shadow-none".split(" ");
             
             ['btn-tab1', 'btn-tab2', 'btn-tab3', 'btn-tab4'].forEach(id => {
                 const btn = document.getElementById(id);
